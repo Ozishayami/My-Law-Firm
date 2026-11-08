@@ -43,7 +43,6 @@ Every push to the production branch deploys automatically, and other branches ge
 | Hero slider | The three headlines |
 | Footer | Regulatory details required by your bar (regulator, registration number), checked by a lawyer |
 | Images | The artwork in `assets/img/art-*.svg` can be swapped for photography: keep the same file names, or update the `src` attributes |
-| Logo | An SVG version of the wordmark would be sharper than the PNG |
 
 ## Before launch
 
