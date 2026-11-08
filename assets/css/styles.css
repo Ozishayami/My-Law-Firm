@@ -360,6 +360,7 @@ button { font: inherit; color: inherit; }
 }
 .slide.is-active .slide-media { transform: scale(1); }
 .slide-media--colonnade { object-position: 60% 50%; }
+.slide-media--photo { object-position: 50% 30%; }
 .slide-media--louvres { object-position: 20% 50%; }
 
 .slide-shade {
@@ -468,6 +469,7 @@ button { font: inherit; color: inherit; }
 
 @media (max-width: 767px) {
   .slide-media { object-position: 72% 50%; }
+  .slide-media--photo { object-position: 52% 50%; }
   .slide-shade,
   .slide-media--louvres ~ .slide-shade {
     background: linear-gradient(0deg, rgb(7 47 56 / 0.78) 0%, rgb(7 47 56 / 0.45) 50%, rgb(7 47 56 / 0.15) 100%);

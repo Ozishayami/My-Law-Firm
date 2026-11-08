@@ -13,6 +13,7 @@ assets/js/main.js       Slider, mobile menu, header, scroll reveals
 assets/fonts/           Hanken Grotesk (self-hosted, SIL Open Font License)
 assets/img/             Wordmarks, favicons and the architectural artwork
 tools/generate-art.py   Regenerates the artwork (python3 tools/generate-art.py assets/img)
+archive/                Replaced elements kept for restoring (not published)
 vercel.json             Vercel headers and clean URLs
 robots.txt              Blocks search engines until launch
 ```
@@ -42,7 +43,7 @@ Every push to the production branch deploys automatically, and other branches ge
 | Insights | The three article cards (titles, dates, categories) |
 | Hero slider | The three headlines |
 | Footer | Regulatory details required by your bar (regulator, registration number), checked by a lawyer |
-| Images | The artwork in `assets/img/art-*.svg` can be swapped for photography: keep the same file names, or update the `src` attributes |
+| Images | Hero slide 1 uses your photo. The remaining artwork in `assets/img/art-*.svg` can be swapped for photography: keep the same file names, or update the `src` attributes |
 
 ## Before launch
 
