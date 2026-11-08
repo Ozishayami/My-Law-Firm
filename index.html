@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Trueworth | Law Firm</title>
+  <meta name="description" content="Trueworth is a law firm giving clear, partner-led advice to businesses, families and individuals.">
+  <!-- Pre-launch: keep search engines out while the content is still placeholder. Remove at launch. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0D5E70">
+  <meta property="og:title" content="Trueworth | Law Firm">
+  <meta property="og:description" content="Clear, partner-led legal advice for decisions that matter.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/icon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================== Header ============================== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Trueworth home">
+        <img src="/assets/img/trueworth-wordmark.png" alt="Trueworth" width="450" height="84">
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#firm">Our Firm</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#careers">Careers</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-outline header-cta" href="#contact">Contact us</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu (full screen) -->
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+    <nav class="container mobile-menu-inner" aria-label="Mobile">
+      <ul>
+        <li><a href="#firm">Our Firm</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+      <p class="mobile-menu-foot">
+        <a href="tel:+000000000000">+00 (0)00 0000 0000</a><br>
+        <a href="mailto:info@trueworth.example">info@trueworth.example</a>
+      </p>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================== 1. Hero carousel ============================== -->
+    <section class="hero" aria-roledescription="carousel" aria-label="Highlights" data-carousel>
+      <div class="hero-slides">
+        <article class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+          <img class="slide-media slide-media--tower" src="/assets/img/art-tower.svg" alt="" width="1800" height="1200" fetchpriority="high">
+          <div class="slide-shade" aria-hidden="true"></div>
+          <div class="container slide-content">
+            <p class="eyebrow">Trueworth</p>
+            <h1 class="display">Clear counsel for the decisions that matter most</h1>
+            <a class="link-arrow" href="#firm">Our firm</a>
+          </div>
+        </article>
+
+        <article class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+          <img class="slide-media slide-media--colonnade" src="/assets/img/art-colonnade.svg" alt="" width="1800" height="1200" loading="lazy">
+          <div class="slide-shade" aria-hidden="true"></div>
+          <div class="container slide-content">
+            <p class="eyebrow">Disputes &amp; Litigation</p>
+            <h2 class="display">Disputes resolved with judgement, not noise</h2>
+            <a class="link-arrow" href="#expertise">Our expertise</a>
+          </div>
+        </article>
+
+        <article class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+          <img class="slide-media slide-media--louvres" src="/assets/img/art-louvres.svg" alt="" width="1800" height="1200" loading="lazy">
+          <div class="slide-shade" aria-hidden="true"></div>
+          <div class="container slide-content">
+            <p class="eyebrow">Insight</p>
+            <h2 class="display">What the new data rules mean for growing businesses</h2>
+            <a class="link-arrow" href="#insights">Read our insights</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="container hero-ui">
+        <div class="hero-progress" role="group" aria-label="Choose slide">
+          <button type="button" class="progress-bar is-active" aria-label="Show slide 1" aria-current="true"><span></span></button>
+          <button type="button" class="progress-bar" aria-label="Show slide 2"><span></span></button>
+          <button type="button" class="progress-bar" aria-label="Show slide 3"><span></span></button>
+        </div>
+        <div class="hero-controls">
+          <button type="button" class="hero-btn hero-btn--plain" data-carousel-toggle aria-label="Pause slideshow">
+            <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+            <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+          </button>
+          <button type="button" class="hero-btn" data-carousel-prev aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <button type="button" class="hero-btn" data-carousel-next aria-label="Next slide">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 2. Firm statement ============================== -->
+    <section class="screen statement" id="firm" aria-labelledby="firm-title">
+      <div class="container">
+        <p class="eyebrow eyebrow--teal reveal">Our firm</p>
+        <h2 class="statement-text reveal" id="firm-title">
+          Trueworth is built on a simple principle: the right advice, given plainly, at the moment it counts.
+        </h2>
+        <div class="statement-grid">
+          <p class="lead reveal">
+            We act for businesses, families and individuals who want a lawyer who understands what is at stake
+            and says what they think. Every matter is led by a partner from first call to final signature.
+          </p>
+          <ul class="pillars" role="list">
+            <li class="reveal">
+              <span class="pillar-num">01</span>
+              <h3>Partner-led</h3>
+              <p>A senior lawyer owns your matter and is the person you speak to.</p>
+            </li>
+            <li class="reveal">
+              <span class="pillar-num">02</span>
+              <h3>Plain answers</h3>
+              <p>Advice you can act on, written for decision-makers rather than other lawyers.</p>
+            </li>
+            <li class="reveal">
+              <span class="pillar-num">03</span>
+              <h3>Fees agreed up front</h3>
+              <p>A clear scope and estimate before the work begins, with no surprises.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 3. Expertise ============================== -->
+    <section class="screen expertise" id="expertise" aria-labelledby="expertise-title">
+      <div class="container expertise-grid">
+        <div class="expertise-intro">
+          <p class="eyebrow eyebrow--sand reveal">Expertise</p>
+          <h2 class="section-title reveal" id="expertise-title">Advice across the life of a business, a family and a career</h2>
+          <p class="reveal">Select a practice area to see how we help.</p>
+        </div>
+
+        <div class="practice-list">
+          <details name="practice" class="practice reveal" open>
+            <summary><span class="practice-num">01</span><span class="practice-name">Corporate &amp; Commercial</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Company formation, shareholder agreements, acquisitions and disposals, joint ventures and the commercial contracts that run your business day to day.</p>
+          </details>
+          <details name="practice" class="practice reveal">
+            <summary><span class="practice-num">02</span><span class="practice-name">Disputes &amp; Litigation</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Commercial disputes, contract claims, debt recovery and arbitration. We aim to resolve matters early and are ready to go to court when we need to.</p>
+          </details>
+          <details name="practice" class="practice reveal">
+            <summary><span class="practice-num">03</span><span class="practice-name">Banking &amp; Finance</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Lending and security, refinancing and restructuring for borrowers, lenders and investors.</p>
+          </details>
+          <details name="practice" class="practice reveal">
+            <summary><span class="practice-num">04</span><span class="practice-name">Real Estate</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Acquisitions, leasing, development and property finance for commercial and private clients.</p>
+          </details>
+          <details name="practice" class="practice reveal">
+            <summary><span class="practice-num">05</span><span class="practice-name">Employment</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Contracts, policies, workplace investigations, exits and tribunal claims, for employers and senior executives.</p>
+          </details>
+          <details name="practice" class="practice reveal">
+            <summary><span class="practice-num">06</span><span class="practice-name">Intellectual Property &amp; Technology</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Brand protection, licensing, technology contracts, data protection and privacy compliance.</p>
+          </details>
+          <details name="practice" class="practice reveal">
+            <summary><span class="practice-num">07</span><span class="practice-name">Private Client &amp; Family</span><span class="practice-icon" aria-hidden="true"></span></summary>
+            <p>Wills, estates, trusts, succession planning and family matters, handled with discretion.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 4. Approach ============================== -->
+    <section class="screen approach" id="approach" aria-labelledby="approach-title">
+      <div class="approach-media" aria-hidden="true">
+        <img src="/assets/img/art-atrium.svg" alt="" width="1800" height="1200" loading="lazy">
+      </div>
+      <div class="approach-body">
+        <p class="eyebrow eyebrow--teal reveal">How we work</p>
+        <h2 class="section-title reveal" id="approach-title">A straightforward way of working</h2>
+        <ol class="steps" role="list">
+          <li class="reveal">
+            <h3>Listen</h3>
+            <p>We start by understanding the people, the commercial picture and what a good outcome looks like for you.</p>
+          </li>
+          <li class="reveal">
+            <h3>Advise</h3>
+            <p>You get a clear view of your options, the risks and our recommendation, in writing.</p>
+          </li>
+          <li class="reveal">
+            <h3>Act</h3>
+            <p>We do the work to an agreed scope and timetable, and keep you updated without being chased.</p>
+          </li>
+          <li class="reveal">
+            <h3>Stay close</h3>
+            <p>When the matter closes, we stay available for the next question, whenever it comes.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== 5. Insights ============================== -->
+    <section class="screen insights" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--teal reveal">Insights</p>
+            <h2 class="section-title reveal" id="insights-title">Thinking that's useful to you</h2>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-media"><img src="/assets/img/art-louvres.svg" alt="" width="1800" height="1200" loading="lazy"></div>
+            <div class="card-body">
+              <p class="card-meta"><span>Technology &amp; Data</span><span aria-hidden="true">·</span><time datetime="2026-10-14">14 October 2026</time></p>
+              <h3>What the new data rules mean for growing businesses</h3>
+              <p>A practical checklist for founders and boards ahead of the changes.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img class="crop-tower" src="/assets/img/art-tower.svg" alt="" width="1800" height="1200" loading="lazy"></div>
+            <div class="card-body">
+              <p class="card-meta"><span>Corporate</span><span aria-hidden="true">·</span><time datetime="2026-09-30">30 September 2026</time></p>
+              <h3>Five clauses to check before you sign a shareholder agreement</h3>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-media"><img class="crop-colonnade" src="/assets/img/art-colonnade.svg" alt="" width="1800" height="1200" loading="lazy"></div>
+            <div class="card-body">
+              <p class="card-meta"><span>Disputes</span><span aria-hidden="true">·</span><time datetime="2026-09-12">12 September 2026</time></p>
+              <h3>Settling early: when it makes sense, and when it doesn't</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 6. Careers ============================== -->
+    <section class="screen careers" id="careers" aria-labelledby="careers-title">
+      <img class="careers-media" src="/assets/img/art-colonnade.svg" alt="" width="1800" height="1200" loading="lazy">
+      <div class="careers-shade" aria-hidden="true"></div>
+      <div class="container careers-content">
+        <p class="eyebrow reveal">Careers</p>
+        <h2 class="display reveal" id="careers-title">Do work you'll be proud to put your name to</h2>
+        <p class="careers-text reveal">We are always glad to hear from talented lawyers, trainees and business services professionals.</p>
+        <a class="link-arrow reveal" href="mailto:careers@trueworth.example">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ============================== 7. Contact + footer ============================== -->
+    <section class="screen contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow eyebrow--teal reveal">Contact</p>
+          <h2 class="section-title reveal" id="contact-title">Let's talk about your matter</h2>
+          <p class="lead reveal">Tell us briefly what you need and a lawyer will come back to you within one working day.</p>
+          <a class="btn btn-solid reveal" href="mailto:info@trueworth.example?subject=New%20enquiry">Email us</a>
+        </div>
+        <dl class="contact-list reveal">
+          <div><dt>Telephone</dt><dd><a href="tel:+000000000000">+00 (0)00 0000 0000</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:info@trueworth.example">info@trueworth.example</a></dd></div>
+          <div><dt>Office</dt><dd>Office address line 1<br>City, Postcode</dd></div>
+          <div><dt>Hours</dt><dd>Monday to Friday, 9:00 to 17:30</dd></div>
+        </dl>
+      </div>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-top">
+            <img class="footer-logo" src="/assets/img/trueworth-wordmark-white.png" alt="Trueworth" width="450" height="84" loading="lazy">
+            <nav aria-label="Footer">
+              <ul>
+                <li><a href="#firm">Our Firm</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#careers">Careers</a></li>
+              </ul>
+            </nav>
+          </div>
+          <p class="disclaimer">
+            The information on this website is for general information only and is not legal advice.
+            Contacting us does not by itself create a lawyer–client relationship. Please do not send confidential
+            information until we have confirmed that we can act for you.
+            <!-- PLACEHOLDER: add regulatory details required by your bar (e.g. regulator, registration number). -->
+          </p>
+          <div class="footer-bottom">
+            <p class="copyright">© <span data-year>2026</span> Trueworth. All rights reserved.</p>
+            <a class="link-arrow link-arrow--up" href="#main">Back to top</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Pre-launch: the site still contains placeholder content.
+# At launch, replace with:
+#   User-agent: *
+#   Allow: /
+User-agent: *
+Disallow: /
