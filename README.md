@@ -10,7 +10,7 @@ index.html              Homepage (hero slider, firm, expertise, approach, insigh
 404.html                Not-found page (Vercel serves it automatically)
 assets/css/styles.css   All styles; colours and type sizes are tokens at the top
 assets/js/main.js       Slider, mobile menu, header, scroll reveals
-assets/fonts/           Hanken Grotesk (self-hosted, SIL Open Font License)
+assets/fonts/           Hanken Grotesk (text) and Newsreader (headings), self-hosted, SIL Open Font License
 assets/img/             Wordmarks, favicons and the architectural artwork
 tools/generate-art.py   Regenerates the artwork (python3 tools/generate-art.py assets/img)
 archive/                Replaced elements kept for restoring (not published)
@@ -44,6 +44,15 @@ Every push to the production branch deploys automatically, and other branches ge
 | Hero slider | The three headlines |
 | Footer | Regulatory details required by your bar (regulator, registration number), checked by a lawyer |
 | Images | Hero slide 1 uses your photo. The remaining artwork in `assets/img/art-*.svg` can be swapped for photography: keep the same file names, or update the `src` attributes |
+
+## Heading font
+
+Headings use **Newsreader**, a free stand-in for **IvyPresto Text Light**, at weight 380 to match Ivy's density.
+IvyPresto is a commercial font: do not commit an Adobe Fonts copy of it to this repository or serve it from the site.
+Once a web licence has been bought from The Ivy Foundry (or an Adobe Fonts web project is set up), switch over in `assets/css/styles.css`:
+
+1. Add an `@font-face` for "IvyPresto Text" pointing at the licensed web font files (or link the Adobe Fonts stylesheet in `index.html`).
+2. Put "IvyPresto Text" first in `--font-display`, and set `--display-weight` to 300.
 
 ## Before launch
 
