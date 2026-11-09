@@ -64,6 +64,7 @@
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --display-weight: 380;       /* large headings: matches the density of IvyPresto Text Light */
   --display-weight-small: 400; /* small headings stay crisp */
+  --display-tracking: -0.05em; /* letter spacing -5% on every heading */
 
   --header-h: 96px;
   --gutter: clamp(16px, 5vw, 72px);
@@ -159,23 +160,23 @@ button { font: inherit; color: inherit; }
 .display, .section-title, .statement-text, .practice-name {
   font-family: var(--font-display);
   font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
   font-optical-sizing: auto;
 }
 .card h3, .pillars h3, .steps h3 {
   font-family: var(--font-display);
   font-weight: var(--display-weight-small);
+  letter-spacing: var(--display-tracking);
   font-optical-sizing: auto;
 }
 .display {
   font-size: var(--step-4);
   line-height: 1.08;
-  letter-spacing: -0.01em;
   text-wrap: balance;
 }
 .section-title {
   font-size: var(--step-3);
   line-height: 1.1;
-  letter-spacing: -0.01em;
   text-wrap: balance;
 }
 .lead {
@@ -521,7 +522,6 @@ button { font: inherit; color: inherit; }
   max-width: 22ch;
   font-size: var(--step-4);
   line-height: 1.1;
-  letter-spacing: -0.01em;
   color: var(--ink);
   text-wrap: balance;
 }
