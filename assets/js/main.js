@@ -165,24 +165,69 @@
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---------------- Active nav link ---------------- */
-  var navLinks = document.querySelectorAll(".primary-nav a[href^='#']");
-  if (navLinks.length && "IntersectionObserver" in window) {
-    var map = {};
-    navLinks.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a; });
-    var navIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var link = map[entry.target.id];
-        if (!link) return;
-        if (entry.isIntersecting) {
-          navLinks.forEach(function (a) { a.removeAttribute("aria-current"); });
-          link.setAttribute("aria-current", "true");
-        }
+  /* ---------------- Expertise menu (hover is CSS; this handles keyboard and touch) ---------------- */
+  document.querySelectorAll("[data-menu]").forEach(function (item) {
+    var button = item.querySelector("[data-menu-button]");
+    function setOpen(open) {
+      item.classList.toggle("is-open", open);
+      button.setAttribute("aria-expanded", String(open));
+      if (open && header) header.classList.remove("is-hidden");
+    }
+    button.addEventListener("click", function () { setOpen(!item.classList.contains("is-open")); });
+    item.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && item.classList.contains("is-open")) { setOpen(false); button.focus(); }
+    });
+    item.addEventListener("focusout", function (e) {
+      if (!item.contains(e.relatedTarget)) setOpen(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (!item.contains(e.target)) setOpen(false);
+    });
+  });
+
+  /* ---------------- Insights filter ---------------- */
+  var filters = document.querySelector("[data-filters]");
+  var filterTarget = document.querySelector("[data-filter-target]");
+  if (filters && filterTarget) {
+    filters.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-filter]");
+      if (!btn) return;
+      var value = btn.getAttribute("data-filter");
+      filters.querySelectorAll("[data-filter]").forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", String(on));
       });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    Object.keys(map).forEach(function (id) {
-      var sec = document.getElementById(id);
-      if (sec) navIO.observe(sec);
+      filterTarget.querySelectorAll("[data-category]").forEach(function (card) {
+        card.hidden = value !== "all" && card.getAttribute("data-category") !== value;
+        if (!card.hidden) card.classList.add("is-visible");
+      });
+    });
+  }
+
+  /* ---------------- Contact form: prefill the area and open an email ---------------- */
+  var enquiry = document.querySelector("[data-enquiry]");
+  if (enquiry) {
+    var area = enquiry.querySelector("[data-practice-select]");
+    var wanted = new URLSearchParams(window.location.search).get("practice");
+    if (area && wanted && area.querySelector('option[value="' + wanted + '"]')) area.value = wanted;
+
+    enquiry.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!enquiry.reportValidity()) return;
+      var f = enquiry.elements;
+      var areaLabel = area && area.value ? area.options[area.selectedIndex].text : "General enquiry";
+      var body = [
+        "Name: " + f.name.value,
+        "Email: " + f.email.value,
+        f.phone.value ? "Phone: " + f.phone.value : "",
+        "Area: " + areaLabel,
+        "",
+        f.message.value,
+      ].filter(function (line, i) { return line !== "" || i === 4; }).join("\n");
+      var subject = "New enquiry: " + areaLabel;
+      window.location.href = "mailto:" + enquiry.getAttribute("data-to") +
+        "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   }
 
