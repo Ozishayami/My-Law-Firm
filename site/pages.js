@@ -425,7 +425,7 @@ ${pageHero({
           <dl>
             <div><dt>Published</dt><dd><time datetime="${a.date}">${fmtDate(a.date)}</time></dd></div>
             <div><dt>Practice area</dt><dd><a href="/expertise/${p.slug}">${esc(p.name)}</a></dd></div>
-            <div><dt>Author</dt><dd>Trueworth</dd></div>
+            <div><dt>Author</dt><dd>${esc(a.author || "Trueworth")}</dd></div>
           </dl>
           <a class="link-arrow link-arrow--teal link-arrow--back" href="/insights">All insights</a>
         </aside>

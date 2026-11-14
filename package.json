@@ -1,0 +1,21 @@
+{
+  "name": "trueworth-website",
+  "private": true,
+  "description": "Trueworth website and its Sanity Studio (CMS) at /studio.",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "node site/build.js && sanity build dist/studio --yes",
+    "build:site": "node site/build.js",
+    "studio": "sanity dev",
+    "preview": "node site/serve.js"
+  },
+  "dependencies": {
+    "@sanity/icons": "^5.3.0",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.23.0",
+    "styled-components": "^6.1.15"
+  }
+}

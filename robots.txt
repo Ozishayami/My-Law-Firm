@@ -2,5 +2,6 @@
 # At launch, replace with:
 #   User-agent: *
 #   Allow: /
+#   Disallow: /studio
 User-agent: *
 Disallow: /

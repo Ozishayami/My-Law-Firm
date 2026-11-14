@@ -15,7 +15,7 @@ const fmtDate = (iso) => {
 
 /** An <img> for one of the shared images, cropped with object-fit by its class. */
 const img = (key, { cls = "", eager = false, alt = "" } = {}) => {
-  const i = images[key];
+  const i = typeof key === "string" ? images[key] : key; // a built-in image name, or a Sanity image object
   const srcset = i.srcset ? ` srcset="${i.srcset}" sizes="100vw"` : "";
   const load = eager ? ` fetchpriority="high"` : ` loading="lazy"`;
   return `<img class="${cls}" src="${i.src}"${srcset} alt="${esc(alt)}" width="${i.w}" height="${i.h}" style="object-position: ${i.pos}"${load}>`;
@@ -181,7 +181,7 @@ const card = (a, { headingTag = "h3" } = {}) => {
 
 /** Preload hints for an image used above the fold. */
 const preloadImage = (key) => {
-  const i = images[key];
+  const i = typeof key === "string" ? images[key] : key;
   return i.srcset
     ? `<link rel="preload" as="image" href="${i.src}" imagesrcset="${i.srcset}" imagesizes="100vw" fetchpriority="high">`
     : `<link rel="preload" as="image" href="${i.src}" fetchpriority="high">`;
