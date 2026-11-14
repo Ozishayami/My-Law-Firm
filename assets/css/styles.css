@@ -912,7 +912,18 @@ button { font: inherit; color: inherit; }
 .link-arrow--back:hover::after { transform: translateX(-4px) rotate(-135deg); }
 .section-head { flex-wrap: wrap; }
 .statement .link-arrow { margin-top: 1.25rem; }
-.expertise-intro .section-title + p { color: rgb(255 255 255 / 0.75); margin-bottom: 1rem; }
+.expertise-statement {
+  max-width: 30ch;
+  margin-bottom: 1.75rem;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-optical-sizing: auto;
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: rgb(255 255 255 / 0.94);
+  text-wrap: pretty;
+}
 .practice .practice-more { margin: 0 0 1.25rem calc(3rem + 0.75rem); color: var(--sand); }
 .approach-body .lead { margin: -1rem 0 2rem; }
 .approach-body > .btn, .steps-more { align-self: flex-start; margin-top: 1.25rem; }

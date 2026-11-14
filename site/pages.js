@@ -112,9 +112,8 @@ const home = () => page({
     <section class="screen expertise" id="expertise" aria-labelledby="expertise-title">
       <div class="container expertise-grid">
         <div class="expertise-intro">
-          <p class="eyebrow eyebrow--sand reveal">Expertise</p>
-          <h2 class="section-title reveal" id="expertise-title">Advice across the life of a business, a family and a career</h2>
-          <p class="reveal">Select a practice area to see how we help.</p>
+          <h2 class="eyebrow eyebrow--sand reveal" id="expertise-title">Expertise</h2>
+          <p class="expertise-statement reveal">Collaboration amongst our lawyers in various disciplines provides niche legal solutions for our clients. We work together across practice areas as one integrated, multidisciplinary team to generate great results for our clients.</p>
           <a class="link-arrow reveal" href="/expertise">All expertise</a>
         </div>
 
@@ -209,7 +208,7 @@ ${pageHero({ image: "colonnade", eyebrow: "Our firm", title: "A firm where every
         <p class="eyebrow eyebrow--teal reveal">Who we are</p>
         <h2 class="statement-text reveal" id="who-title">We act for people who want a lawyer who understands what is at stake and says what they think.</h2>
         <div class="statement-grid">
-          <p class="lead reveal">Trueworth advises on corporate and commercial matters, disputes, finance, property, employment, intellectual property and private client work.</p>
+          <p class="lead reveal">Trueworth advises on corporate, commercial and startup work, finance, oil and gas, disputes, employment, property and private client matters.</p>
           <p class="lead reveal">We are deliberately built differently. The people who founded the firm hold themselves to the same rules as everyone who joins it, and those rules are written down.</p>
         </div>
       </div>
